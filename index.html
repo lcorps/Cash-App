@@ -1,34 +1,55 @@
 <!DOCTYPE html>
-<!-- Created By CodingLab - www.codinglabweb.com -->
-<html lang="en" dir="ltr">
+<!-- Coding by CodingNepal || www.codingnepalweb.com -->
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Login Form | CodingLab</title> 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Responsive Website in HTML CSS</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="../custom-scripts.js" defer></script>
   </head>
   <body>
-    <div class="container">
-      <div class="wrapper">
-        <div class="title"><span>Login Form</span></div>
-        <form action="#">
-          <div class="row">
-            <i class="fas fa-user"></i>
-            <input type="text" placeholder="Email or Phone" required>
+    <main>
+      <!-- Header Start -->
+      <header>
+        <nav class="nav container">
+          <h2 class="nav_logo"><a href="#">CodingNepal</a></h2>
+          <ul class="menu_items">
+            <img src="images/times.svg" alt="timesicon" id="menu_toggle" />
+            <li><a href="#" class="nav_link">Home</a></li>
+            <li><a href="#" class="nav_link">About</a></li>
+            <li><a href="#" class="nav_link">Service</a></li>
+            <li><a href="#" class="nav_link">Project</a></li>
+            <li><a href="#" class="nav_link">Contact</a></li>
+          </ul>
+          <img src="images/bars.svg" alt="timesicon" id="menu_toggle" />
+        </nav>
+      </header>
+      <!-- Header End -->
+      <!-- Hero Start -->
+      <section class="hero">
+        <div class="row container">
+          <div class="column">
+            <h2>Top free tool and extension to <br />radiply grow you business</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, architecto? Consectetur enim obcaecati velit quibusdam iure, perspiciatis accusantium, voluptatibus possimus cum voluptates dolorum optio ab vitae. Praesentium voluptas quia voluptates at aperiam aliquid vitae autem!</p>
+            <div class="buttons">
+              <button class="btn">Read More</button>
+              <button class="btn">Contact Us</button>
+            </div>
           </div>
-          <div class="row">
-            <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Password" required>
+          <div class="column">
+            <img src="images/hero.png" alt="heroImg" class="hero_img" />
           </div>
-          <div class="pass"><a href="#">Forgot password?</a></div>
-          <div class="row button">
-            <input type="submit" value="Login">
-          </div>
-          <div class="signup-link">Not a member? <a href="#">Signup now</a></div>
-        </form>
-      </div>
-    </div>
-
+        </div>
+        <img src="images/bg-bottom-hero.png" alt="" class="curveImg" />
+      </section>
+      <!-- Hero End-->
+    </main>
+    <script>
+      const header = document.querySelector("header");
+      const menuToggler = document.querySelectorAll("#menu_toggle");
+      menuToggler.forEach(toggler => {
+        toggler.addEventListener("click", () => header.classList.toggle("showMenu"));
+      });
+    </script>
   </body>
 </html>
